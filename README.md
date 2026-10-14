@@ -8,7 +8,7 @@ A [herdr](https://herdr.dev) plugin: a floating fuzzy finder for jumping between
 
 ## Install
 
-Requires herdr 0.9.5+ and a Rust toolchain (`cargo`), since the plugin builds on install.
+Requires herdr 0.7.4+ and a Rust toolchain (`cargo`), since the plugin builds on install.
 
 ```sh
 herdr plugin install phillipahereza/herdr-ws
