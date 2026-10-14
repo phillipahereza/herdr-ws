@@ -1,0 +1,22 @@
+id = "fuzzy-jump"
+name = "Fuzzy Jump"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Fuzzy-jump to a workspace, or a tab with @"
+platforms = ["macos", "linux"]
+
+[[build]]
+command = ["cargo", "build", "--release", "--locked"]
+
+[[panes]]
+id = "picker"
+title = "Jump"
+placement = "popup"
+width = "60%"
+height = 16
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-ws\""]
+
+[[actions]]
+id = "open"
+title = "Fuzzy jump to workspace/tab"
+command = ["herdr", "plugin", "pane", "open", "--plugin", "fuzzy-jump", "--entrypoint", "picker", "--focus"]
